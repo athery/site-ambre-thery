@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ambre Thery — Technicienne scientifique, sciences de la mer</title>
+<meta name="description" content="Portfolio d'Ambre Thery, étudiante en Génie de l'Environnement Marin au CNAM Intechmer. Plongée scientifique, formation, stages et travaux en biologie et écologie marine.">
+
+<!-- Open Graph / LinkedIn / Facebook — ces balises sont lues telles quelles
+     par les aperçus de lien (email, LinkedIn, Slack...), qui n'exécutent
+     pas le JavaScript du site. Si tu changes le nom de domaine, mets à
+     jour og:url et og:image ci-dessous (elles doivent être en URL absolue). -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ambre Thery">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://ambre.thery.io/">
+<meta property="og:title" content="Ambre Thery — Technicienne scientifique, sciences de la mer">
+<meta property="og:description" content="Recherche de stage en écologie, écotoxicologie et microbiologie marine. Plongeuse naturaliste, étudiante au CNAM Intechmer.">
+<meta property="og:image" content="https://ambre.thery.io/assets/img/portrait.jpg">
+
+<!-- Twitter/X : image en portrait, donc carte "summary" (pas "large_image"
+     qui attend un format paysage et recadrerait mal la photo). -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ambre Thery — Technicienne scientifique, sciences de la mer">
+<meta name="twitter:description" content="Recherche de stage en écologie, écotoxicologie et microbiologie marine. Plongeuse naturaliste, étudiante au CNAM Intechmer.">
+<meta name="twitter:image" content="https://ambre.thery.io/assets/img/portrait.jpg">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#accueil">Aller au contenu</a>
+
+<header class="nav-wrap" id="site-header">
+  <nav class="nav container">
+    <a href="#accueil" class="nav-brand">Ambre Thery</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li id="navItem-plongee"><a href="#plongee" id="navLink-plongee"></a></li>
+      <li id="navItem-formation"><a href="#formation" id="navLink-formation"></a></li>
+      <li id="navItem-stages"><a href="#stages" id="navLink-stages"></a></li>
+      <li id="navItem-travaux"><a href="#travaux" id="navLink-travaux"></a></li>
+      <li id="navItem-competences"><a href="#competences" id="navLink-competences"></a></li>
+      <li id="navItem-contact"><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="accueil">
+    <div class="hero-waves" aria-hidden="true">
+      <div class="bubble b1"></div><div class="bubble b2"></div><div class="bubble b3"></div>
+      <div class="bubble b4"></div><div class="bubble b5"></div>
+    </div>
+    <div class="container hero-inner">
+      <img class="hero-photo" id="heroPhoto" src="" alt="Photo d'Ambre Thery" width="220" height="220">
+      <p class="hero-badge" id="heroAvailability"></p>
+      <h1 id="heroName"></h1>
+      <p class="hero-role" id="heroRole"></p>
+      <p class="hero-tagline" id="heroTagline"></p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Me contacter</a>
+        <a id="heroCvLink" class="btn btn-ghost" href="#" target="_blank" rel="noopener">Télécharger mon CV (PDF)</a>
+      </div>
+    </div>
+    <svg class="wave-divider" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,40 C240,100 480,0 720,40 C960,80 1200,20 1440,50 L1440,100 L0,100 Z"></path>
+    </svg>
+  </section>
+
+  <!-- ================= INTRO ================= -->
+  <section class="section intro-section" id="introSection">
+    <div class="container">
+      <p class="intro-text" id="heroIntro"></p>
+      <div class="lang-row" id="langRow"></div>
+    </div>
+  </section>
+
+  <!-- ================= PLONGEE ================= -->
+  <section class="section section-tint reorderable-section" id="plongee">
+    <div class="container">
+      <h2><span class="eyebrow" id="plongeeEyebrow"></span><span id="plongeeTitle"></span></h2>
+      <p class="section-lead" id="plongeeIntro"></p>
+
+      <div class="stat-card" id="plongeeStatCard">
+        <span class="stat-value" id="plongeeStatValue"></span>
+        <span class="stat-label" id="plongeeStatLabel"></span>
+      </div>
+
+      <div id="certSection">
+        <h3 class="sub-heading">Certifications</h3>
+        <div id="certGroups"></div>
+      </div>
+
+      <div id="gallerySection">
+        <h3 class="sub-heading" id="plongeeGalleryTitle"></h3>
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FORMATION ================= -->
+  <section class="section reorderable-section" id="formation">
+    <div class="container">
+      <h2><span class="eyebrow" id="formationEyebrow"></span><span id="formationTitle"></span></h2>
+      <div class="timeline" id="formationTimeline"></div>
+
+      <div id="formationTerrainSection">
+        <h3 class="sub-heading" id="formationTerrainTitle"></h3>
+        <div class="timeline" id="formationTerrainTimeline"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STAGES ================= -->
+  <section class="section section-tint reorderable-section" id="stages">
+    <div class="container">
+      <h2><span class="eyebrow" id="stagesEyebrow"></span><span id="stagesTitle"></span></h2>
+      <div class="timeline" id="stagesTimeline"></div>
+    </div>
+  </section>
+
+  <!-- ================= TRAVAUX ================= -->
+  <section class="section reorderable-section" id="travaux">
+    <div class="container">
+      <h2><span class="eyebrow" id="travauxEyebrow"></span><span id="travauxTitle"></span></h2>
+      <div class="card-grid" id="travauxGrid"></div>
+    </div>
+  </section>
+
+  <!-- ================= COMPETENCES ================= -->
+  <section class="section section-tint reorderable-section" id="competences">
+    <div class="container">
+      <h2><span class="eyebrow" id="competencesEyebrow"></span><span id="competencesTitle"></span></h2>
+      <div class="skills-grid" id="skillsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section contact-section" id="contact">
+    <svg class="wave-divider wave-divider-top" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,60 C240,0 480,100 720,60 C960,20 1200,80 1440,50 L1440,0 L0,0 Z"></path>
+    </svg>
+    <div class="container contact-inner">
+      <h2 class="contact-title" id="contactTitle"></h2>
+      <p class="contact-lead" id="contactLead"></p>
+      <div class="contact-actions">
+        <a id="contactEmail" class="btn btn-primary" href="#">Me contacter</a>
+        <a id="contactCvLink" class="btn btn-ghost-light" href="#" target="_blank" rel="noopener">Télécharger mon CV (PDF)</a>
+        <a id="contactPhone" class="btn btn-ghost-light" href="#"></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="year"></span> Ambre Thery</p>
+  </div>
+</footer>
+
+<!-- Carrousel / zoom pour les photos de plongée -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">&times;</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Photo précédente">&#8249;</button>
+  <img id="lightboxImg" src="" alt="">
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Photo suivante">&#8250;</button>
+  <div class="lightbox-info">
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+    <p class="lightbox-lieu" id="lightboxLieu"></p>
+    <span class="lightbox-counter" id="lightboxCounter"></span>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
